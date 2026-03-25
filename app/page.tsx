@@ -201,7 +201,7 @@ export default function Home() {
    * Shows a skip button; aborting the controller skips the step gracefully.
    */
   const runStep = useCallback(
-    async <T>(
+    async <T,>(
       stepName: string,
       tag: LogTag,
       fn: (signal: AbortSignal) => Promise<{ result: T; request?: unknown; response?: unknown }>
